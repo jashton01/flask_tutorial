@@ -2,6 +2,12 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
+from flask import render_template
+
+@app.route("/hi")
+def index():
+    return render_template("index.html")
+
 @app.route('/getmsg/', methods=['GET'])
 def respond():
     # Retrieve the name from url parameter
