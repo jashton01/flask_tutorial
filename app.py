@@ -32,7 +32,7 @@ def post_something():
     # You can add the test cases you made in the previous function, but in our case here you are just testing the POST functionality
     if param:
         return jsonify({
-            "Message": f"Welcome {name} to our awesome platform!!",
+            "Message": f"Welcome dear sweet {name} to our awesome platform!!",
             # Add this option to distinct the POST request
             "METHOD" : "POST"
         })
@@ -48,4 +48,4 @@ def index():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=5000, debug=True)
